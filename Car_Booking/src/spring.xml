@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:p="http://www.springframework-org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<bean id="c1" class="car.BookingDetails" >
+<property name="bid">
+<value>2501</value>
+</property>
+
+<property name="bdate" >
+
+<value>120516</value>
+</property>
+
+<property name="vname">
+
+<value>Audi</value>
+
+</property>
+
+<property name="vnum">
+
+<value>TS02543</value>
+
+</property>
+
+
+</bean>
+
+<bean id="c2" class="car.PaymentDetails">
+<property name="withdriver">
+
+<value>15000</value>
+
+</property>
+<property name="withoutdriver">
+
+<value>10000</value>
+
+</property>
+</bean>
+
+<bean id="c3" class="car.TimeSheet">
+<property name="bdate">
+
+<value>250615</value>
+
+</property>
+</bean>
+<bean id="c4" class="car.Locations">
+<property name="from">
+<value>Hyderabad</value>
+</property>
+<property name="to">
+<value>Bangalore</value>
+</property> 
+</bean>
+
+
+<bean id="c5" class="car.All">
+<property name="bookingdetails">
+<ref bean="c1"/>
+</property>
+<property name="paymentdetails">
+<ref bean="c2"/>
+</property>
+<property name="timesheet" >
+<ref bean="c3"/>
+</property>
+<property name="locations">
+<ref bean="c4"/>
+</property>
+</bean>
+</beans>
